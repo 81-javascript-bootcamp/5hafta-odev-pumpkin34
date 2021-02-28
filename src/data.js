@@ -16,3 +16,9 @@ export const addTaskToApi = (task) => {
     body: JSON.stringify(task),
   });
 };
+
+export function deleteTaskToApi(id) {
+  return fetch(`${API_URL}/${id}`, {
+    method: 'delete',
+  });
+}
